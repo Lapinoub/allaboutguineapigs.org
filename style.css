@@ -4,6 +4,9 @@
   padding: 0;
 }
 
+body {
+  overflow: cli l;
+}
 header {
   background-color: #ddd;
   font-size: 1.5em;
@@ -20,12 +23,19 @@ header {
     font-size: 11px;
     padding: 12px;
   }
+  a.contact {
+    font-size: 11px;
+  }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   .mainP {
     font-size: 15px;
     padding: 10px;
+  }
+
+  a.contact {
+    font-size: 15px;
   }
 }
 
@@ -34,12 +44,20 @@ header {
     font-size: 30px;
     padding: 10px;
   }
+
+  a.contact {
+    font-size: 30px;
+  }
 }
 nav {
   background-color: #eee;
   margin-top: 1em;
 }
 
+a.contact {
+  color: #6767da;
+  text-decoration: underline;
+}
 ul {
   display: flex;
   flex-wrap: wrap;
@@ -47,17 +65,42 @@ ul {
   list-style: none;
 }
 
+ol {
+  list-style-type: decimal;
+}
+
 li {
   padding: 0.5em;
 }
 
-a {
-  color: #333;
+.link {
+  color: #000000;
   text-decoration: none;
   font-size: 1.2em;
   transition: all 0.2s ease-in-out;
 }
 
-a:hover {
+.link:hover {
   color: #555;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media query for landscape orientation */
+@media (min-aspect-ratio: 1/1) {
+  img {
+    width: 75%;
+    align-self: center;
+  }
+}
+
+/* Media query for portrait orientation */
+@media (max-aspect-ratio: 1/1) {
+  img {
+    width: 100%;
+  }
 }
